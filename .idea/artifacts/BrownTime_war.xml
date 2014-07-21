@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="BrownTime:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="BrownTime.war">
+      <element id="artifact" artifact-name="BrownTime:war exploded" />
+    </root>
+  </artifact>
+</component>
