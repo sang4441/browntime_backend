@@ -3,9 +3,16 @@ package com.springapp.mvc.model;
 
 public class BrownCart extends BrownMenu {
 
-	private int mPriceTotal;
-    private int quantity;
+    public int getPriceTotal() {
+        return priceTotal;
+    }
 
+    public void setPriceTotal(int priceTotal) {
+        this.priceTotal = priceTotal;
+    }
+
+    private int priceTotal;
+    private int quantity;
     private String instruction;
 
     public BrownCart() {
@@ -19,7 +26,7 @@ public class BrownCart extends BrownMenu {
 	}
 	
 	public int getTotalPrice() {
-		return this.getQuantity() * this.getPrice();
+		return quantity * this.getPrice();
 	}
 
 

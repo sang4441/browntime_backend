@@ -7,25 +7,25 @@ public class BrownMenu {
 	private UUID id;
     private int name;
 	private int price;
-	private int type;
+	private int category;
 	private String description;
 
 	public BrownMenu() {
 		id = UUID.randomUUID();
 	}
 	
-	public BrownMenu(int name, int price, int type) {
+	public BrownMenu(int name, int price, int category) {
 		id = UUID.randomUUID();
 		name = name;
 		price = price;
-		type = type;
+        category = category;
 	}
 	
-	public BrownMenu(int name, int price, int type, String description) {
+	public BrownMenu(int name, int price, int category, String description) {
 		id = UUID.randomUUID();
 		name = name;
 		price = price;
-		type = type;
+        category = category;
 		description = description;
 	}
 
@@ -54,12 +54,12 @@ public class BrownMenu {
         this.price = price;
     }
 
-    public int getType() {
-        return type;
+    public int getCategory() {
+        return category;
     }
 
-    public void setType(int type) {
-        this.type = type;
+    public void setCategory(int category) {
+        this.category = category;
     }
 
     public String getDescription() {
@@ -69,6 +69,4 @@ public class BrownMenu {
     public void setDescription(String description) {
         this.description = description;
     }
-
-
 }
