@@ -4,45 +4,46 @@ import java.util.UUID;
 
 public class BrownMenu {
 
-	private UUID id;
-    private int name;
+	private int id;
+    private String name;
 	private int price;
 	private int category;
 	private String description;
+    private String imageURL;
 
-	public BrownMenu() {
-		id = UUID.randomUUID();
-	}
-	
-	public BrownMenu(int name, int price, int category) {
-		id = UUID.randomUUID();
-		name = name;
-		price = price;
-        category = category;
-	}
-	
-	public BrownMenu(int name, int price, int category, String description) {
-		id = UUID.randomUUID();
-		name = name;
-		price = price;
-        category = category;
-		description = description;
-	}
+//	public BrownMenu() {
+//		id = UUID.randomUUID();
+//	}
+//
+//	public BrownMenu(int name, int price, int category) {
+//		id = UUID.randomUUID();
+//		name = name;
+//		price = price;
+//        category = category;
+//	}
+//
+//	public BrownMenu(int name, int price, int category, String description) {
+//		id = UUID.randomUUID();
+//		name = name;
+//		price = price;
+//        category = category;
+//		description = description;
+//	}
 
 
-    public UUID getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public int getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(int name) {
+    public void setName(String name) {
         this.name = name;
     }
 

@@ -22,7 +22,7 @@ public class BrownCart extends BrownMenu {
     }
 	
 	public BrownCart(int name, int price, int type) {
-		super(name, price, type);
+//		super(name, price, type);
 	}
 	
 	public int getTotalPrice() {
