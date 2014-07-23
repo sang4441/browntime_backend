@@ -49,9 +49,8 @@ public class OrderDAO {
         sql = "INSERT INTO menuOrder VALUES(null, ?, ?, ?, ?)";
 
         List<BrownCart> carts = order.getCarts();
-        int menuId = 1;
         for (BrownCart cart : carts) {
-            jdbcTemplate.update(sql, new Object[] {menuId, orderId, cart.getQuantity(), cart.getInstruction()});
+            jdbcTemplate.update(sql, new Object[] {cart.getId(), orderId, cart.getQuantity(), cart.getInstruction()});
         }
     }
 

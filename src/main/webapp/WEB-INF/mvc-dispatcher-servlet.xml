@@ -23,6 +23,7 @@
     <!-- declare beans -->
     <bean id="orderDao" class="com.springapp.mvc.DAO.OrderDAO" />
     <bean id="menuDao" class="com.springapp.mvc.DAO.MenuDAO" />
+    <bean id="categoryDao" class="com.springapp.mvc.DAO.CategoryDAO"/>
     <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
 
     <!-- declare datasource bean -->

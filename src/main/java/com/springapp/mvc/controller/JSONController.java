@@ -1,7 +1,9 @@
 package com.springapp.mvc.controller;
 
+import com.springapp.mvc.DAO.CategoryDAO;
 import com.springapp.mvc.DAO.MenuDAO;
 import com.springapp.mvc.DAO.OrderDAO;
+import com.springapp.mvc.model.BrownCategory;
 import com.springapp.mvc.model.BrownMenu;
 import com.springapp.mvc.model.BrownOrder;
 import com.springapp.mvc.model.BrownTest;
@@ -23,6 +25,8 @@ public class JSONController {
     OrderDAO orderDAO;
     @Autowired
     MenuDAO menuDAO;
+    @Autowired
+    CategoryDAO categoryDAO;
 
     @RequestMapping(value = "/getOrder", produces="application/json")
 	public @ResponseBody
@@ -50,4 +54,10 @@ public class JSONController {
         return menus;
     }
 
+    @RequestMapping(value = "/getCategories/{sellerId}", method = RequestMethod.GET, produces="application/json")
+    @ResponseBody
+    public List<BrownCategory> getCategories(ModelMap model, @PathVariable String sellerId) {
+        List<BrownCategory> categories = categoryDAO.getCategoriesBySellerId(Integer.parseInt(sellerId));
+        return categories;
+    }
 }
