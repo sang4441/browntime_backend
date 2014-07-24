@@ -16,9 +16,9 @@ public class BrownCart extends BrownMenu {
 //		super(name, price, type);
 	}
 	
-	public int getTotalPrice() {
-		return quantity * this.getPrice();
-	}
+//	public int getTotalPrice() {
+//		return quantity * this.getPrice();
+//	}
 
 
     public int getQuantity() {
@@ -40,11 +40,11 @@ public class BrownCart extends BrownMenu {
 
 
     public int getPriceTotal() {
-        return priceTotal;
+        return quantity * this.getPrice();
     }
 
-    public void setPriceTotal(int priceTotal) {
-        this.priceTotal = priceTotal;
-    }
+//    public void setPriceTotal(int priceTotal) {
+//        this.priceTotal = priceTotal;
+//    }
 
 }

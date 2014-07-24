@@ -8,13 +8,13 @@ import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
-public class BrownOrder {
+public class BrownOrder extends BrownBuyer {
 
     private int id;
     private int sellerId;
     private int typeId;
     private int price;
-    private int buyerId;
+//    private int buyerId;
     private Date timeRequested;
     private int duration;
     private int statusId;
@@ -53,13 +53,13 @@ public class BrownOrder {
         this.typeId = typeId;
     }
 
-    public int getBuyerId() {
-        return buyerId;
-    }
-
-    public void setBuyerId(int buyerId) {
-        this.buyerId = buyerId;
-    }
+//    public int getBuyerId() {
+//        return buyerId;
+//    }
+//
+//    public void setBuyerId(int buyerId) {
+//        this.buyerId = buyerId;
+//    }
 
     public Date getTimeRequested() {
         return timeRequested;

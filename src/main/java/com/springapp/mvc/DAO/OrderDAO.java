@@ -23,7 +23,9 @@ public class OrderDAO {
     public List<BrownOrder> getOrdersBySellerId(int sellerId) {
 
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-        String sql = "SELECT * FROM orders WHERE seller_id = ?";
+        String sql = "SELECT od.*, bu.name as buyer_name, bu.cell_number as buyer_cell_number FROM orders AS\tod\n" +
+                "INNER JOIN buyers AS bu ON od.buyer_id = bu.id\n" +
+                "WHERE od.seller_id = ?";
         List<BrownOrder> orders  = jdbcTemplate.query(
                 sql, new Object[] {sellerId}, new BeanPropertyRowMapper(BrownOrder.class));
 
