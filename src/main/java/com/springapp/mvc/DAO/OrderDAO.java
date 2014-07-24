@@ -14,7 +14,8 @@ import java.util.List;
  * Created by kimsanghwan on 7/18/2014.
  */
 public class OrderDAO {
-
+    @Autowired
+    CartDAO cartDAO;
     @Autowired
     DataSource dataSource;
 
@@ -25,15 +26,21 @@ public class OrderDAO {
         String sql = "SELECT * FROM orders WHERE seller_id = ?";
         List<BrownOrder> orders  = jdbcTemplate.query(
                 sql, new Object[] {sellerId}, new BeanPropertyRowMapper(BrownOrder.class));
+
+        for (BrownOrder order : orders) {
+            order.setCarts(cartDAO.getCartsByOrderId(order.getId()));
+        }
+
         return orders;
     }
 
-    public BrownOrder getOrdersOrderId(int orderId) {
+    public BrownOrder getOrdersByOrderId(int orderId) {
 
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
         String sql = "SELECT * FROM orders WHERE id = ?";
         BrownOrder order  = jdbcTemplate.queryForObject(
                 sql, new Object[]{orderId}, BrownOrder.class);
+
         return order;
     }
 

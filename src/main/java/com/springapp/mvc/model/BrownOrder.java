@@ -5,26 +5,37 @@ import org.codehaus.jackson.annotate.JsonProperty;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 public class BrownOrder {
 
-    private UUID id;
+    private int id;
     private int sellerId;
     private int typeId;
     private int price;
     private int buyerId;
     private Date timeRequested;
+    private int duration;
     private int statusId;
-    private ArrayList<BrownCart> carts;
+    private List<BrownCart> carts;
 
-    public UUID getId() {
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(UUID id) {
-        this.id = id;
+    public int getDuration() {
+        return duration;
     }
+
+    public void setDuration(int duration) {
+        this.duration = duration;
+    }
+
 
     public int getSellerId() {
         return sellerId;
@@ -74,11 +85,11 @@ public class BrownOrder {
         this.price = price;
     }
 
-    public ArrayList<BrownCart> getCarts() {
+    public List<BrownCart> getCarts() {
         return carts;
     }
 
-    public void setCarts(ArrayList<BrownCart> carts) {
+    public void setCarts(List<BrownCart> carts) {
         this.carts = carts;
     }
 
