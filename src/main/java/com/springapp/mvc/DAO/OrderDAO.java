@@ -49,10 +49,10 @@ public class OrderDAO {
     public void addOrder(BrownOrder order) {
 
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-        String sql = "INSERT INTO orders VALUES(null, ?, ?, ?, ?, ?, ?);";
+        String sql = "INSERT INTO orders VALUES(null, ?, ?, ?, ?, ?, ?, ?);";
 
         jdbcTemplate.update(sql, new Object[] {order.getSellerId(), order.getTypeId(), order.getBuyerId(), order.getTimeRequested(),
-                order.getStatusId(), order.getPrice()});
+                order.getDuration(), order.getStatusId(), order.getPrice()});
 
         int orderId = jdbcTemplate.queryForObject( "SELECT max(id) FROM orders", Integer.class);
         sql = "INSERT INTO menuOrder VALUES(null, ?, ?, ?, ?)";

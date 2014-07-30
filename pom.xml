@@ -18,6 +18,13 @@
         </repository>
     </repositories>
 
+    <distributionManagement>
+        <repository>
+            <id>ftp-repository</id>
+            <url>ftp://browntime123.cafe24.com/tomcat/webapps/ROOT/</url>
+        </repository>
+    </distributionManagement>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -116,6 +123,14 @@
 
     <build>
         <finalName>BrownTime</finalName>
+        <extensions>
+            <!-- Enabling the use of FTP -->
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-ftp</artifactId>
+                <version>1.0-beta-6</version>
+            </extension>
+        </extensions>
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>

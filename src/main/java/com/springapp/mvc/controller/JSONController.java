@@ -28,6 +28,12 @@ public class JSONController {
     @Autowired
     CategoryDAO categoryDAO;
 
+    @RequestMapping(value = "")
+    public String home(Model model) {
+        model.addAttribute("message", "hello");
+        return "hello";
+    }
+
     @RequestMapping(value = "/getOrder", produces="application/json")
 	public @ResponseBody
     List<BrownOrder> getOrder(ModelMap model) {

@@ -16,6 +16,7 @@ public class BrownOrder extends BrownBuyer {
     private int price;
 //    private int buyerId;
     private Date timeRequested;
+    private String address;
     private int duration;
     private int statusId;
     private List<BrownCart> carts;
@@ -91,6 +92,15 @@ public class BrownOrder extends BrownBuyer {
 
     public void setCarts(List<BrownCart> carts) {
         this.carts = carts;
+    }
+
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
 }
