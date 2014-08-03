@@ -13,12 +13,14 @@ public class BrownOrder extends BrownBuyer {
     private int id;
     private int sellerId;
     private int typeId;
+    private String typeName;
     private int price;
 //    private int buyerId;
     private Date timeRequested;
     private String address;
     private int duration;
     private int statusId;
+    private String statusName;
     private List<BrownCart> carts;
 
     public void setId(int id) {
@@ -94,6 +96,13 @@ public class BrownOrder extends BrownBuyer {
         this.carts = carts;
     }
 
+    public String getTypeName() {
+        return typeName;
+    }
+
+    public void setTypeName(String typeName) {
+        this.typeName = typeName;
+    }
 
     public String getAddress() {
         return address;
@@ -103,4 +112,11 @@ public class BrownOrder extends BrownBuyer {
         this.address = address;
     }
 
+    public String getStatusName() {
+        return statusName;
+    }
+
+    public void setStatusName(String statusName) {
+        this.statusName = statusName;
+    }
 }

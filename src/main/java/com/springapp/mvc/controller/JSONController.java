@@ -41,6 +41,27 @@ public class JSONController {
 		return orders;
 	}
 
+    @RequestMapping(value = "/getOrderByPhone/{phoneNum}", produces="application/json")
+	public @ResponseBody
+    List<BrownOrder> getOrderByPhone (ModelMap model,  @PathVariable String phoneNum) {
+
+        List<BrownOrder> orders = orderDAO.getOrdersByPhoneNum(Integer.parseInt(phoneNum));
+		return orders;
+	}
+
+    @RequestMapping(value = "/updateOrderDuration/{orderId}/{duration}", produces="application/json")
+	public @ResponseBody
+    void updateOrderStatus (ModelMap model,  @PathVariable String orderId, String duration) {
+
+        int orderIdInt = Integer.parseInt(orderId);
+        int durationInt = Integer.parseInt(duration);
+//        List<BrownOrder> orders =
+                orderDAO.updateOrderDuration(orderIdInt, durationInt);
+//		return orders;
+	}
+
+
+
     @RequestMapping(value = "/addOrder",
             method = RequestMethod.POST,
             headers = "Accept=application/json")

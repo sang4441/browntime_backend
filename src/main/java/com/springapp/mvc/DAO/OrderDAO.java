@@ -23,11 +23,31 @@ public class OrderDAO {
     public List<BrownOrder> getOrdersBySellerId(int sellerId) {
 
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-        String sql = "SELECT od.*, bu.name as buyer_name, bu.cell_number as buyer_cell_number FROM orders AS\tod\n" +
-                "INNER JOIN buyers AS bu ON od.buyer_id = bu.id\n" +
+        String sql = "SELECT od.*, bu.name as buyer_name, bu.cell_number as buyer_cell_number, ot.name as type_name, os.name as status_name FROM orders AS\tod\n" +
+                "                INNER JOIN buyers AS bu ON od.buyer_id = bu.id\n" +
+                "                INNER JOIN order_type AS ot ON ot.id = od.type_id\n" +
+                "                INNER JOIN order_status AS os ON os.id = od.status_id\n" +
                 "WHERE od.seller_id = ?";
         List<BrownOrder> orders  = jdbcTemplate.query(
                 sql, new Object[] {sellerId}, new BeanPropertyRowMapper(BrownOrder.class));
+
+        for (BrownOrder order : orders) {
+            order.setCarts(cartDAO.getCartsByOrderId(order.getId()));
+        }
+
+        return orders;
+    }
+
+    public List<BrownOrder> getOrdersByPhoneNum(int phoneNum) {
+
+        JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+        String sql = "SELECT od.*, bu.name as buyer_name, bu.cell_number as buyer_cell_number, ot.name as type_name, os.name as status_name FROM orders AS\tod\n" +
+                "                INNER JOIN buyers AS bu ON od.buyer_id = bu.id\n" +
+                "                INNER JOIN order_type AS ot ON ot.id = od.type_id\n" +
+                "                INNER JOIN order_status AS os ON os.id = od.status_id" +
+                "                WHERE bu.cell_number = ?";
+        List<BrownOrder> orders  = jdbcTemplate.query(
+                sql, new Object[] {phoneNum}, new BeanPropertyRowMapper(BrownOrder.class));
 
         for (BrownOrder order : orders) {
             order.setCarts(cartDAO.getCartsByOrderId(order.getId()));
@@ -68,10 +88,14 @@ public class OrderDAO {
     }
 
     public void orderStatusChange(int orderId, int orderStatusId) {
-
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
         String sql = "UPDATE orders SET status_id = ? WHERE id = ?";
         jdbcTemplate.update(sql, new Object[] {orderStatusId, orderId});
     }
 
+    public void updateOrderDuration(int orderId, int duration) {
+        JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+        String sql = "UPDATE orders SET status_id = 2, duration = ?  WHERE id = ?";
+        jdbcTemplate.update(sql, new Object[] {duration, orderId});
+    }
 }
