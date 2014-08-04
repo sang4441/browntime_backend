@@ -4,10 +4,7 @@ import com.springapp.mvc.DAO.CategoryDAO;
 import com.springapp.mvc.DAO.MenuDAO;
 import com.springapp.mvc.DAO.OrderDAO;
 import com.springapp.mvc.DAO.UserDAO;
-import com.springapp.mvc.model.BrownCategory;
-import com.springapp.mvc.model.BrownMenu;
-import com.springapp.mvc.model.BrownOrder;
-import com.springapp.mvc.model.BrownTest;
+import com.springapp.mvc.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -69,12 +66,21 @@ public class JSONController {
         orderDAO.updateOrderStatus(orderIdInt, statusIdInt);
 	}
 
-    @RequestMapping(value = "/requestSMS/{phoneNum}", produces="application/json")
+    @RequestMapping(value = "/requestSMS",
+            method = RequestMethod.POST,
+            headers = "Accept=application/json")
 	public @ResponseBody
-    void updateOrderStatusToComplete (ModelMap model,  @PathVariable String phoneNum) {
-        int phoneNumInt = Integer.parseInt(phoneNum);
-        userDAO.updateUserSMS(phoneNumInt);
+    void updateOrderStatusToComplete (ModelMap model,  @RequestBody BrownBuyer buyer) {
+//        int phoneNumInt = Integer.parseInt(phoneNum);
+        userDAO.updateUserSMS(buyer);
 	}
+
+    @RequestMapping(value = "/sendSMS", produces="application/json")
+    public @ResponseBody
+    List<BrownBuyer> sendSMS(ModelMap model) {
+        List<BrownBuyer> buyers = userDAO.getBuyerToSendSMS();
+        return buyers;
+    }
 
     @RequestMapping(value = "/addOrder",
             method = RequestMethod.POST,
