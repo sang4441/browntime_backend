@@ -3,6 +3,7 @@ package com.springapp.mvc.controller;
 import com.springapp.mvc.DAO.CategoryDAO;
 import com.springapp.mvc.DAO.MenuDAO;
 import com.springapp.mvc.DAO.OrderDAO;
+import com.springapp.mvc.DAO.UserDAO;
 import com.springapp.mvc.model.BrownCategory;
 import com.springapp.mvc.model.BrownMenu;
 import com.springapp.mvc.model.BrownOrder;
@@ -27,6 +28,8 @@ public class JSONController {
     MenuDAO menuDAO;
     @Autowired
     CategoryDAO categoryDAO;
+    @Autowired
+    UserDAO userDAO;
 
     @RequestMapping(value = "")
     public String home(Model model) {
@@ -51,16 +54,27 @@ public class JSONController {
 
     @RequestMapping(value = "/updateOrderDuration/{orderId}/{duration}", produces="application/json")
 	public @ResponseBody
-    void updateOrderStatus (ModelMap model,  @PathVariable String orderId, String duration) {
+    void updateOrderDuration (ModelMap model,  @PathVariable String orderId, @PathVariable String duration) {
 
         int orderIdInt = Integer.parseInt(orderId);
         int durationInt = Integer.parseInt(duration);
-//        List<BrownOrder> orders =
-                orderDAO.updateOrderDuration(orderIdInt, durationInt);
-//		return orders;
+        orderDAO.updateOrderDuration(orderIdInt, durationInt);
 	}
 
+    @RequestMapping(value = "/updateOrderStatus/{orderId}/{statusId}", produces="application/json")
+	public @ResponseBody
+    void updateOrderStatusToComplete (ModelMap model,  @PathVariable String orderId, @PathVariable String statusId) {
+        int orderIdInt = Integer.parseInt(orderId);
+        int statusIdInt = Integer.parseInt(statusId);
+        orderDAO.updateOrderStatus(orderIdInt, statusIdInt);
+	}
 
+    @RequestMapping(value = "/requestSMS/{phoneNum}", produces="application/json")
+	public @ResponseBody
+    void updateOrderStatusToComplete (ModelMap model,  @PathVariable String phoneNum) {
+        int phoneNumInt = Integer.parseInt(phoneNum);
+        userDAO.updateUserSMS(phoneNumInt);
+	}
 
     @RequestMapping(value = "/addOrder",
             method = RequestMethod.POST,

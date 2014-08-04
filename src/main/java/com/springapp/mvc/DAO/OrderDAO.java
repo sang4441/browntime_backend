@@ -87,7 +87,7 @@ public class OrderDAO {
 
     }
 
-    public void orderStatusChange(int orderId, int orderStatusId) {
+    public void updateOrderStatus(int orderId, int orderStatusId) {
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
         String sql = "UPDATE orders SET status_id = ? WHERE id = ?";
         jdbcTemplate.update(sql, new Object[] {orderStatusId, orderId});

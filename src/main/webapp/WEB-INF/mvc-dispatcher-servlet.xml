@@ -24,7 +24,9 @@
     <bean id="orderDao" class="com.springapp.mvc.DAO.OrderDAO" />
     <bean id="menuDao" class="com.springapp.mvc.DAO.MenuDAO" />
     <bean id="categoryDao" class="com.springapp.mvc.DAO.CategoryDAO"/>
-    <bean id="cartDap" class="com.springapp.mvc.DAO.CartDAO"/>
+    <bean id="cartDao" class="com.springapp.mvc.DAO.CartDAO"/>
+    <bean id="UserDao" class="com.springapp.mvc.DAO.UserDAO"/>
+
     <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
 
     <!-- declare datasource bean -->

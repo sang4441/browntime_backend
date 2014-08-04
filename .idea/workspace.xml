@@ -55,6 +55,23 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/springapp/mvc/controller/JSONController.java" line="68" class="com.springapp.mvc.controller.JSONController" package="com.springapp.mvc.controller">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -64,15 +81,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="hello.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hello.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="BrownMenu.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/springapp/mvc/model/BrownMenu.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -85,18 +93,18 @@
       <file leaf-file-name="OrderDAO.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/springapp/mvc/DAO/OrderDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="55" selection-start="4075" selection-end="4075" vertical-scroll-proportion="0.0" vertical-offset="896" max-vertical-offset="1485">
+            <state line="24" column="26" selection-start="604" selection-end="670" vertical-scroll-proportion="-5.4545455" vertical-offset="0" max-vertical-offset="1485">
               <folding>
-                <marker date="1407044257000" expanded="true" signature="692:699" placeholder="SELECT * FRO..orders..." />
-                <marker date="1407044257000" expanded="true" signature="692:1097" placeholder="SELECT od.*,..orders..." />
-                <marker date="1407044257000" expanded="true" signature="692:1138" placeholder="SELECT od.*,..orders..." />
-                <marker date="1407044257000" expanded="true" signature="1595:2057" placeholder="SELECT od.*,..orders..." />
-                <marker date="1407044257000" expanded="true" signature="2506:2539" placeholder="SELECT * FRO..orders..." />
-                <marker date="1407044257000" expanded="true" signature="2826:2878" placeholder="INSERT INTO ..." />
-                <marker date="1407044257000" expanded="true" signature="3147:3173" placeholder="SELECT max(i..orders..." />
-                <marker date="1407044257000" expanded="true" signature="3207:3253" placeholder="INSERT INTO ..." />
-                <marker date="1407044257000" expanded="true" signature="3678:3722" placeholder="UPDATE order..." />
-                <marker date="1407044257000" expanded="true" signature="3958:4017" placeholder="UPDATE order..." />
+                <marker date="1407047653000" expanded="true" signature="692:699" placeholder="SELECT * FRO..orders..." />
+                <marker date="1407047653000" expanded="true" signature="692:1097" placeholder="SELECT od.*,..orders..." />
+                <marker date="1407047653000" expanded="true" signature="692:1138" placeholder="SELECT od.*,..orders..." />
+                <marker date="1407047653000" expanded="true" signature="1595:2057" placeholder="SELECT od.*,..orders..." />
+                <marker date="1407047653000" expanded="true" signature="2506:2539" placeholder="SELECT * FRO..orders..." />
+                <marker date="1407047653000" expanded="true" signature="2826:2878" placeholder="INSERT INTO ..." />
+                <marker date="1407047653000" expanded="true" signature="3147:3173" placeholder="SELECT max(i..orders..." />
+                <marker date="1407047653000" expanded="true" signature="3207:3253" placeholder="INSERT INTO ..." />
+                <marker date="1407047653000" expanded="true" signature="3678:3722" placeholder="UPDATE order..." />
+                <marker date="1407047653000" expanded="true" signature="3958:4017" placeholder="UPDATE order..." />
               </folding>
             </state>
           </provider>
@@ -156,18 +164,32 @@
       <file leaf-file-name="mvc-dispatcher-servlet.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="45" selection-start="1785" selection-end="1789" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="690">
+            <state line="27" column="59" selection-start="1406" selection-end="1406" vertical-scroll-proportion="0.0" vertical-offset="131" max-vertical-offset="720">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JSONController.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="JSONController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/springapp/mvc/controller/JSONController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="0" selection-start="1782" selection-end="1782" vertical-scroll-proportion="0.6484375" vertical-offset="478" max-vertical-offset="1425">
+            <state line="75" column="22" selection-start="2726" selection-end="2726" vertical-scroll-proportion="-8.307693" vertical-offset="909" max-vertical-offset="1635">
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserDAO.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/springapp/mvc/DAO/UserDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="9" selection-start="1083" selection-end="1083" vertical-scroll-proportion="0.7910156" vertical-offset="0" max-vertical-offset="540">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1407140699000" expanded="true" signature="484:543" placeholder="SELECT count..." />
+                <marker date="1407140699000" expanded="true" signature="694:778" placeholder="INSERT INTO ..." />
+                <marker date="1407140699000" expanded="true" signature="928:982" placeholder="UPDATE buyer..." />
               </folding>
             </state>
           </provider>
@@ -191,7 +213,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/springapp/mvc/DAO/MenuDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/springapp/mvc/DAO/CategoryDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/springapp/mvc/model/BrownCategory.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/springapp/mvc/DAO/CartDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/springapp/mvc/model/BrownCart.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/springapp/mvc/model/BrownBuyer.java" />
@@ -199,7 +220,9 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/springapp/mvc/model/BrownOrder.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/springapp/mvc/DAO/OrderDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/springapp/mvc/controller/JSONController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/springapp/mvc/DAO/UserDAO.java" />
       </list>
     </option>
   </component>
@@ -815,12 +838,12 @@
       <workItem from="1405679650014" duration="34615000" />
       <workItem from="1406266703614" duration="4757000" />
       <workItem from="1406616333165" duration="3314000" />
-      <workItem from="1406992666395" duration="934000" />
+      <workItem from="1406992666395" duration="3764000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43620000" />
+    <option name="totallyTimeSpent" value="46450000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="6" />
@@ -896,16 +919,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="46" column="86" selection-start="1994" selection-end="1994" vertical-scroll-proportion="0.0" vertical-offset="690" max-vertical-offset="1545">
           <folding>
-            <marker date="1407044257000" expanded="true" signature="692:699" placeholder="SELECT * FRO..orders..." />
-            <marker date="1407044257000" expanded="true" signature="692:1097" placeholder="SELECT od.*,..orders..." />
-            <marker date="1407044257000" expanded="true" signature="692:1138" placeholder="SELECT od.*,..orders..." />
-            <marker date="1407044257000" expanded="true" signature="1595:2057" placeholder="SELECT od.*,..orders..." />
-            <marker date="1407044257000" expanded="true" signature="2506:2539" placeholder="SELECT * FRO..orders..." />
-            <marker date="1407044257000" expanded="true" signature="2826:2878" placeholder="INSERT INTO ..." />
-            <marker date="1407044257000" expanded="true" signature="3147:3173" placeholder="SELECT max(i..orders..." />
-            <marker date="1407044257000" expanded="true" signature="3207:3253" placeholder="INSERT INTO ..." />
-            <marker date="1407044257000" expanded="true" signature="3678:3722" placeholder="UPDATE order..." />
-            <marker date="1407044257000" expanded="true" signature="3958:4017" placeholder="UPDATE order..." />
+            <marker date="1407047653000" expanded="true" signature="692:699" placeholder="SELECT * FRO..orders..." />
+            <marker date="1407047653000" expanded="true" signature="692:1097" placeholder="SELECT od.*,..orders..." />
+            <marker date="1407047653000" expanded="true" signature="692:1138" placeholder="SELECT od.*,..orders..." />
+            <marker date="1407047653000" expanded="true" signature="1595:2057" placeholder="SELECT od.*,..orders..." />
+            <marker date="1407047653000" expanded="true" signature="2506:2539" placeholder="SELECT * FRO..orders..." />
+            <marker date="1407047653000" expanded="true" signature="2826:2878" placeholder="INSERT INTO ..." />
+            <marker date="1407047653000" expanded="true" signature="3147:3173" placeholder="SELECT max(i..orders..." />
+            <marker date="1407047653000" expanded="true" signature="3207:3253" placeholder="INSERT INTO ..." />
+            <marker date="1407047653000" expanded="true" signature="3678:3722" placeholder="UPDATE order..." />
+            <marker date="1407047653000" expanded="true" signature="3958:4017" placeholder="UPDATE order..." />
           </folding>
         </state>
       </provider>
@@ -1006,16 +1029,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="39" selection-start="896" selection-end="896" vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="1245">
           <folding>
-            <marker date="1407044257000" expanded="true" signature="692:699" placeholder="SELECT * FRO..orders..." />
-            <marker date="1407044257000" expanded="true" signature="692:1097" placeholder="SELECT od.*,..orders..." />
-            <marker date="1407044257000" expanded="true" signature="692:1138" placeholder="SELECT od.*,..orders..." />
-            <marker date="1407044257000" expanded="true" signature="1595:2057" placeholder="SELECT od.*,..orders..." />
-            <marker date="1407044257000" expanded="true" signature="2506:2539" placeholder="SELECT * FRO..orders..." />
-            <marker date="1407044257000" expanded="true" signature="2826:2878" placeholder="INSERT INTO ..." />
-            <marker date="1407044257000" expanded="true" signature="3147:3173" placeholder="SELECT max(i..orders..." />
-            <marker date="1407044257000" expanded="true" signature="3207:3253" placeholder="INSERT INTO ..." />
-            <marker date="1407044257000" expanded="true" signature="3678:3722" placeholder="UPDATE order..." />
-            <marker date="1407044257000" expanded="true" signature="3958:4017" placeholder="UPDATE order..." />
+            <marker date="1407047653000" expanded="true" signature="692:699" placeholder="SELECT * FRO..orders..." />
+            <marker date="1407047653000" expanded="true" signature="692:1097" placeholder="SELECT od.*,..orders..." />
+            <marker date="1407047653000" expanded="true" signature="692:1138" placeholder="SELECT od.*,..orders..." />
+            <marker date="1407047653000" expanded="true" signature="1595:2057" placeholder="SELECT od.*,..orders..." />
+            <marker date="1407047653000" expanded="true" signature="2506:2539" placeholder="SELECT * FRO..orders..." />
+            <marker date="1407047653000" expanded="true" signature="2826:2878" placeholder="INSERT INTO ..." />
+            <marker date="1407047653000" expanded="true" signature="3147:3173" placeholder="SELECT max(i..orders..." />
+            <marker date="1407047653000" expanded="true" signature="3207:3253" placeholder="INSERT INTO ..." />
+            <marker date="1407047653000" expanded="true" signature="3678:3722" placeholder="UPDATE order..." />
+            <marker date="1407047653000" expanded="true" signature="3958:4017" placeholder="UPDATE order..." />
           </folding>
         </state>
       </provider>
@@ -1095,16 +1118,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="39" selection-start="896" selection-end="896" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1245">
           <folding>
-            <marker date="1407044257000" expanded="true" signature="692:699" placeholder="SELECT * FRO..orders..." />
-            <marker date="1407044257000" expanded="true" signature="692:1097" placeholder="SELECT od.*,..orders..." />
-            <marker date="1407044257000" expanded="true" signature="692:1138" placeholder="SELECT od.*,..orders..." />
-            <marker date="1407044257000" expanded="true" signature="1595:2057" placeholder="SELECT od.*,..orders..." />
-            <marker date="1407044257000" expanded="true" signature="2506:2539" placeholder="SELECT * FRO..orders..." />
-            <marker date="1407044257000" expanded="true" signature="2826:2878" placeholder="INSERT INTO ..." />
-            <marker date="1407044257000" expanded="true" signature="3147:3173" placeholder="SELECT max(i..orders..." />
-            <marker date="1407044257000" expanded="true" signature="3207:3253" placeholder="INSERT INTO ..." />
-            <marker date="1407044257000" expanded="true" signature="3678:3722" placeholder="UPDATE order..." />
-            <marker date="1407044257000" expanded="true" signature="3958:4017" placeholder="UPDATE order..." />
+            <marker date="1407047653000" expanded="true" signature="692:699" placeholder="SELECT * FRO..orders..." />
+            <marker date="1407047653000" expanded="true" signature="692:1097" placeholder="SELECT od.*,..orders..." />
+            <marker date="1407047653000" expanded="true" signature="692:1138" placeholder="SELECT od.*,..orders..." />
+            <marker date="1407047653000" expanded="true" signature="1595:2057" placeholder="SELECT od.*,..orders..." />
+            <marker date="1407047653000" expanded="true" signature="2506:2539" placeholder="SELECT * FRO..orders..." />
+            <marker date="1407047653000" expanded="true" signature="2826:2878" placeholder="INSERT INTO ..." />
+            <marker date="1407047653000" expanded="true" signature="3147:3173" placeholder="SELECT max(i..orders..." />
+            <marker date="1407047653000" expanded="true" signature="3207:3253" placeholder="INSERT INTO ..." />
+            <marker date="1407047653000" expanded="true" signature="3678:3722" placeholder="UPDATE order..." />
+            <marker date="1407047653000" expanded="true" signature="3958:4017" placeholder="UPDATE order..." />
           </folding>
         </state>
       </provider>
@@ -1250,13 +1273,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="45" selection-start="1785" selection-end="1789" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="690">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/springapp/mvc/model/BrownBuyer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="32" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="420">
@@ -1273,27 +1289,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/springapp/mvc/DAO/OrderDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="55" selection-start="4075" selection-end="4075" vertical-scroll-proportion="0.0" vertical-offset="896" max-vertical-offset="1485">
+        <state line="24" column="26" selection-start="604" selection-end="670" vertical-scroll-proportion="-5.4545455" vertical-offset="0" max-vertical-offset="1485">
           <folding>
-            <marker date="1407044257000" expanded="true" signature="692:699" placeholder="SELECT * FRO..orders..." />
-            <marker date="1407044257000" expanded="true" signature="692:1097" placeholder="SELECT od.*,..orders..." />
-            <marker date="1407044257000" expanded="true" signature="692:1138" placeholder="SELECT od.*,..orders..." />
-            <marker date="1407044257000" expanded="true" signature="1595:2057" placeholder="SELECT od.*,..orders..." />
-            <marker date="1407044257000" expanded="true" signature="2506:2539" placeholder="SELECT * FRO..orders..." />
-            <marker date="1407044257000" expanded="true" signature="2826:2878" placeholder="INSERT INTO ..." />
-            <marker date="1407044257000" expanded="true" signature="3147:3173" placeholder="SELECT max(i..orders..." />
-            <marker date="1407044257000" expanded="true" signature="3207:3253" placeholder="INSERT INTO ..." />
-            <marker date="1407044257000" expanded="true" signature="3678:3722" placeholder="UPDATE order..." />
-            <marker date="1407044257000" expanded="true" signature="3958:4017" placeholder="UPDATE order..." />
+            <marker date="1407047653000" expanded="true" signature="692:699" placeholder="SELECT * FRO..orders..." />
+            <marker date="1407047653000" expanded="true" signature="692:1097" placeholder="SELECT od.*,..orders..." />
+            <marker date="1407047653000" expanded="true" signature="692:1138" placeholder="SELECT od.*,..orders..." />
+            <marker date="1407047653000" expanded="true" signature="1595:2057" placeholder="SELECT od.*,..orders..." />
+            <marker date="1407047653000" expanded="true" signature="2506:2539" placeholder="SELECT * FRO..orders..." />
+            <marker date="1407047653000" expanded="true" signature="2826:2878" placeholder="INSERT INTO ..." />
+            <marker date="1407047653000" expanded="true" signature="3147:3173" placeholder="SELECT max(i..orders..." />
+            <marker date="1407047653000" expanded="true" signature="3207:3253" placeholder="INSERT INTO ..." />
+            <marker date="1407047653000" expanded="true" signature="3678:3722" placeholder="UPDATE order..." />
+            <marker date="1407047653000" expanded="true" signature="3958:4017" placeholder="UPDATE order..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="59" selection-start="1406" selection-end="1406" vertical-scroll-proportion="0.0" vertical-offset="131" max-vertical-offset="720">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/springapp/mvc/controller/JSONController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="0" selection-start="1782" selection-end="1782" vertical-scroll-proportion="0.6484375" vertical-offset="478" max-vertical-offset="1425">
+        <state line="75" column="22" selection-start="2726" selection-end="2726" vertical-scroll-proportion="-8.307693" vertical-offset="909" max-vertical-offset="1635">
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/springapp/mvc/DAO/UserDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="9" selection-start="1083" selection-end="1083" vertical-scroll-proportion="0.7910156" vertical-offset="0" max-vertical-offset="540">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1407140699000" expanded="true" signature="484:543" placeholder="SELECT count..." />
+            <marker date="1407140699000" expanded="true" signature="694:778" placeholder="INSERT INTO ..." />
+            <marker date="1407140699000" expanded="true" signature="928:982" placeholder="UPDATE buyer..." />
           </folding>
         </state>
       </provider>
