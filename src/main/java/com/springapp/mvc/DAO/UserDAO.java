@@ -37,7 +37,7 @@ public class UserDAO {
         String sql = "SELECT count(id) as count FROM buyers WHERE sms_flag = 1";
         int SMSCount = jdbcTemplate.queryForInt(sql);
         if (SMSCount > 0) {
-            sql = "SELECT id, name, cell_number, sms_number FROM buyers WHERE sms_flag = 1";
+            sql = "SELECT id as buyer_id, name as buyer_name, cell_number as buyer_cell_number, sms_number FROM buyers WHERE sms_flag = 1";
             List<BrownBuyer> buyers = jdbcTemplate.query(sql, new BeanPropertyRowMapper(BrownBuyer.class));
             for (BrownBuyer buyer: buyers) {
                 updateBuyerSMSFlag(buyer);
@@ -52,6 +52,14 @@ public class UserDAO {
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
         String sql = "UPDATE buyers SET sms_flag = 0 WHERE id = ?";
         jdbcTemplate.update(sql, new Object[] {buyer.getBuyerId()});
+    }
+
+    public int getSMS(int buyerId) {
+        JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+        String sql = "SELECT sms_number FROM buyers WHERE id = ?";
+        int requiredSMSNum = jdbcTemplate.queryForInt(sql, new Object[] {buyerId});
+
+        return requiredSMSNum;
     }
 
     public boolean isSMSMatched(int buyerId, int SMSNum) {

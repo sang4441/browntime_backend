@@ -82,6 +82,15 @@ public class JSONController {
         return buyers;
     }
 
+    @RequestMapping(value = "/getSMS/{buyerId}", produces="application/json")
+    public @ResponseBody
+    int getSMS(ModelMap model, @PathVariable String buyerId) {
+        int smsNum = userDAO.getSMS(Integer.parseInt(buyerId));
+        return smsNum;
+    }
+
+
+
     @RequestMapping(value = "/addOrder",
             method = RequestMethod.POST,
             headers = "Accept=application/json")
