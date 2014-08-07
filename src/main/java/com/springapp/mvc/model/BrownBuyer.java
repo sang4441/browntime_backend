@@ -6,7 +6,7 @@ package com.springapp.mvc.model;
 public class BrownBuyer {
     private int buyerId;
     private String buyerName;
-    private int buyerCellNumber;
+    private String buyerCellNumber;
     private int isCertified;
     private int smsNumber;
     private int smsFlag;
@@ -27,11 +27,12 @@ public class BrownBuyer {
         this.buyerName = buyerName;
     }
 
-    public int getBuyerCellNumber() {
+
+    public String getBuyerCellNumber() {
         return buyerCellNumber;
     }
 
-    public void setBuyerCellNumber(int buyerCellNumber) {
+    public void setBuyerCellNumber(String buyerCellNumber) {
         this.buyerCellNumber = buyerCellNumber;
     }
 

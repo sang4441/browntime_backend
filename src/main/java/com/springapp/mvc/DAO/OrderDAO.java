@@ -8,6 +8,7 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.sql.DataSource;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -27,7 +28,8 @@ public class OrderDAO {
                 "                INNER JOIN buyers AS bu ON od.buyer_id = bu.id\n" +
                 "                INNER JOIN order_type AS ot ON ot.id = od.type_id\n" +
                 "                INNER JOIN order_status AS os ON os.id = od.status_id\n" +
-                "WHERE od.seller_id = ?";
+                "WHERE od.seller_id = ?\n" +
+                "ORDER BY od.id DESC";
         List<BrownOrder> orders  = jdbcTemplate.query(
                 sql, new Object[] {sellerId}, new BeanPropertyRowMapper(BrownOrder.class));
 
@@ -69,10 +71,10 @@ public class OrderDAO {
     public void addOrder(BrownOrder order) {
 
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-        String sql = "INSERT INTO orders VALUES(null, ?, ?, ?, ?, ?, ?, ?);";
+        String sql = "INSERT INTO orders VALUES(null, ?, ?, ?, ?, ?, ?, ?, ?);";
 
-        jdbcTemplate.update(sql, new Object[] {order.getSellerId(), order.getTypeId(), order.getBuyerId(), order.getTimeRequested(),
-                order.getDuration(), order.getStatusId(), order.getPrice()});
+        jdbcTemplate.update(sql, new Object[] {order.getSellerId(), order.getTypeId(), order.getBuyerId(),
+                order.getDuration(), order.getStatusId(), order.getPrice(), order.getTimeRequested(), new Date()});
 
         int orderId = jdbcTemplate.queryForObject( "SELECT max(id) FROM orders", Integer.class);
         sql = "INSERT INTO menuOrder VALUES(null, ?, ?, ?, ?)";
